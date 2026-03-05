@@ -1,7 +1,6 @@
 /*
 Author: Patricia Sunday
-Desc: javascript file for projects page in portfolio
-For: Assignment 1-projects.html
+Purpose: javascript file for projects page in portfolio
 */
 
 //execute script once window loads
@@ -11,7 +10,6 @@ window.onload = function () {
     const backButton = document.getElementById("back");
     const forwardButton = document.getElementById("forward");
     const projects = document.getElementsByClassName("project"); //to store all projects as elements in array
-    const projectTitles = document.getElementsByClassName("project-title"); //to store all project titles since they'll be clicked
 
     //to change amount of projects to be shown based on page width
     function updateProjectsShown(){
@@ -59,18 +57,14 @@ window.onload = function () {
     backButton.addEventListener("click", decrementCurrentProjectIndex);
     forwardButton.addEventListener("click", incrementCurrentProjectIndex);
 
-    //to toggle details dropdown on each title
-    for (let i=0; i<projectTitles.length; i++){
-        projectTitles[i].addEventListener("click", function (){
-            const details = projectTitles[i].nextElementSibling;
-
-            //hide details if showing, show details if hidden
-            if(details.style.display === "block"){
-                details.style.display = "none";
-            }
-            else{
-                details.style.display = "block";
-            }
+    // enable detail toggling on each project, swapping image with details
+    for (let i=0; i<projects.length; i++){
+        projects[i].classList.add("cursor-pointer"); // denote clickability on project using pointer
+        projects[i].addEventListener("click", function (){
+            const img = projects[i].querySelector(".project-img");
+            const details = projects[i].querySelector(".project-details");
+            img.classList.toggle("hidden");
+            details.classList.toggle("hidden");
         });
     }
 
