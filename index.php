@@ -1,7 +1,6 @@
 <!--
 Code written by Patricia Sunday
 Purpose: this is the homepage for my portfolio
-Last Edited: December 30, 2025
 -->
 
 <!DOCTYPE html>
@@ -10,6 +9,7 @@ Last Edited: December 30, 2025
     <head>
         <title>Patricia Sunday Portfolio</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Patricia Sunday">
         <meta name="description" content="Homepage for portfolio">
         <meta name="keywords" content="homepage, portfolio, programming, patricia sunday">

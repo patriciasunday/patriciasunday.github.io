@@ -1,7 +1,6 @@
 <!--
 Code written by Patricia Sunday
 Purpose: this is the contact form page for my portfolio
-Last Edited: December 30th, 2025
 -->
 <!DOCTYPE html>
 <!--using h-full to allow child <body> element to span full screen height-->
@@ -9,10 +8,12 @@ Last Edited: December 30th, 2025
     <head>
         <title>Contact Me</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Patricia Sunday">
         <meta name="description" content="Contact form for portfolio">
         <meta name="keywords" content="connect, portfolio, contact, contact me, message, email, form">
         <link rel="stylesheet" href="/styles/output.css">
+        <script src="/scripts/contact-me.js" defer></script>
     </head>
     <body class=" h-full flex flex-col text-[var(--text-color)]">
         <header class="m-8 flex flex-col gap-6">
@@ -28,11 +29,11 @@ Last Edited: December 30th, 2025
         </header>
         <main class="m-8 mt-0 grow">
             <!--contact form (name, email, message)-->
-            <form id="contact" method="GET" action="mailto:patriciasnsunday@outlook.com" class="flex flex-col md:flex-row gap-6" >
-                <div id="file-upload" class="input-flex bg-[var(--primary-color)] min-w-100 rounded-4xl justify-center items-center py-4">
-                    <label for="file"> 
+            <form id="contact" class="flex flex-col md:flex-row gap-6">
+                <div id="file-upload" class="relative input-flex bg-[var(--primary-color)] w-100 rounded-4xl justify-center items-center py-4 cursor-pointer transition-all hover:opacity-80 hover:scale-[1.02] overflow-hidden">
+                    <label for="file" class="cursor-pointer">
                         <img src="../media/fileupload.png" alt="File upload symbol" class="w-10 m-auto">
-                        Choose a file to upload
+                        <span style="font-weight: 600">Choose a file to upload</span>
                     </label>
                     <input type="file" id="file" form="contact" class="hidden">
                 </div>
@@ -42,10 +43,6 @@ Last Edited: December 30th, 2025
                     <div class="input-flex">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" class="input-border" required>
-                    </div>
-                    <div class="input-flex">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" class="input-border" required>
                     </div>
                     <div class="input-flex">
                         <label for="subject">Subject</label>
@@ -66,9 +63,3 @@ Last Edited: December 30th, 2025
         <?php require "footer.php"; ?>
     </body>
 </html>
-<!--
-todo: fix file upload so that clicking on any part of the div prompts upload
-todo: fix file upload so that the label changes to their filename when they put in file
-todo: use js to fix mailto mechanism & have form body in the generated email
-todo: change method, action, and remove required attributes once php form handling is configured
--->
