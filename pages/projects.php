@@ -14,7 +14,7 @@ Purpose: this is the projects page for my portfolio
         <link rel="stylesheet" href="/styles/output.css">
         <script src="/scripts/projects.js" defer></script>
     </head>
-    <body class="flex flex-col h-full text-[var(--text-color)]">
+    <body class="flex flex-col min-h-full text-[var(--text-color)]">
        <header class="m-8 flex flex-col gap-3">
             <div class="self-center"><?php require "nav.php"; ?></div>
             <hr class="mt-5">
