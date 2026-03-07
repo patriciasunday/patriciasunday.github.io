@@ -3,7 +3,6 @@ Code written by Patricia Sunday
 Purpose: this is the contact form page for my portfolio
 -->
 <!DOCTYPE html>
-<!--using h-full to allow child <body> element to span full screen height-->
 <html lang="en" class="h-full">
     <head>
         <title>Contact Me</title>
@@ -16,37 +15,43 @@ Purpose: this is the contact form page for my portfolio
         <script src="/scripts/contact-me.js" defer></script>
     </head>
     <body class="min-h-full flex flex-col text-[var(--text-color)]">
-        <header class="m-8 flex flex-col gap-6">
-            <div class="self-center"><?php require "nav.php"; ?></div>
-            <!--form title header group-->
-            <div class="flex flex-col gap-3">
-                <div class="flex flex-row justify-between mt-5">
-                    <h1 class="text-xl font-bold">Pin Your Message!</h1>
-                    <input type="submit" form="contact" class="px-10 rounded-xl bg-[var(--primary-contrast)] text-[var(--bg-color)] font-bold active:bg-[var(--text-color)]">
+        <!--image header section-->
+        <header class="relative h-72 flex flex-col">
+            <img src="../media/profile-background.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover">
+            <!--dark overlay so nav and text are readable-->
+            <div class="absolute inset-0 bg-black/40"></div>
+            <!--nav and hero text on top of overlay-->
+            <div class="relative z-10 flex flex-col h-full text-white">
+                <div class="self-center pt-6"><?php require "nav.php"; ?></div>
+                <div class="grow flex flex-col justify-center items-center gap-2 text-center px-8">
+                    <h1 class="text-4xl font-bold">Reach Out!</h1>
+                    <p class="text-lg font-medium opacity-85">I'd love to hear from you :)</p>
                 </div>
-                <hr>
             </div>
         </header>
-        <main class="m-8 mt-0 grow">
-            <!--contact form (name, email, message)-->
-            <form id="contact" class="flex flex-col md:flex-row gap-6">
-                <div id="file-upload" class="relative input-flex bg-[var(--primary-color)] w-100 rounded-4xl justify-center items-center py-4 cursor-pointer transition-all hover:opacity-80 hover:scale-[1.02] overflow-hidden">
-                    <label for="file" class="cursor-pointer">
-                        <img src="../media/fileupload.png" alt="File upload symbol" class="w-10 m-auto">
-                        <span style="font-weight: 600">Choose a file to upload</span>
-                    </label>
-                    <input type="file" id="file" form="contact" class="hidden">
-                </div>
-                <!--form text input section-->
-                <!--flex-grow to expand into available page width-->
-                <div class="input-flex gap-5 grow">
-                    <div class="input-flex">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Enter your name" class="input-border" required>
+        <!--contact form section-->
+        <main class="grow flex flex-col items-center p-10 md:p-16">
+            <p class="text-sm mb-6 self-start md:self-center">
+                If you prefer direct email, feel free to reach me at
+                <a href="mailto:patriciasnsunday@outlook.com" class="font-medium text-[var(--primary-contrast)] hover:underline">patriciasnsunday@outlook.com</a>
+            </p>
+            <!--contact form card-->
+            <section class="w-full max-w-2xl flex flex-col gap-6 border border-[var(--text-color)]/15 rounded-2xl p-8" style="box-shadow: 0 4px 24px color-mix(in srgb, var(--primary-contrast) 30%, transparent)">
+                <h2 class="text-2xl font-bold">Contact Form</h2>
+                <form id="contact" class="flex flex-col gap-5">
+                    <div class="flex gap-4">
+                        <div class="input-flex grow">
+                            <label for="firstname" class="text-sm mb-1">First Name</label>
+                            <input type="text" id="firstname" name="firstname" class="w-full border border-[var(--text-color)]/30 rounded-lg px-3 py-2 bg-transparent outline-none focus:border-[var(--primary-contrast)] transition-colors" required>
+                        </div>
+                        <div class="input-flex grow">
+                            <label for="lastname" class="text-sm mb-1">Last Name</label>
+                            <input type="text" id="lastname" name="lastname" class="w-full border border-[var(--text-color)]/30 rounded-lg px-3 py-2 bg-transparent outline-none focus:border-[var(--primary-contrast)] transition-colors" required>
+                        </div>
                     </div>
                     <div class="input-flex">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" class="input-border" required>
+                        <label for="subject" class="text-sm mb-1">Subject</label>
+                        <select id="subject" name="subject" class="w-full border border-[var(--text-color)]/30 rounded-lg px-3 py-2 bg-transparent outline-none focus:border-[var(--primary-contrast)] transition-colors" required>
                             <option>Inquiry</option>
                             <option>Feedback</option>
                             <option>Offer</option>
@@ -54,12 +59,14 @@ Purpose: this is the contact form page for my portfolio
                         </select>
                     </div>
                     <div class="input-flex">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Enter your message" class="input-border min-h-40" required></textarea>
+                        <label for="message" class="text-sm mb-1">Write a message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full border border-[var(--text-color)]/30 rounded-lg px-3 py-2 bg-transparent outline-none focus:border-[var(--primary-contrast)] transition-colors resize-none" required></textarea>
                     </div>
-                </div>
-            </form>
+                    <button type="submit" class="self-start px-10 py-2 rounded-full bg-[var(--primary-contrast)] text-[var(--bg-color)] font-bold cursor-pointer transition-all hover:opacity-80 active:scale-95">Submit</button>
+                </form>
+            </section>
         </main>
+
         <?php require "footer.php"; ?>
     </body>
 </html>
