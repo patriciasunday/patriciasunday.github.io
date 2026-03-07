@@ -14,7 +14,7 @@ Purpose: this is the resume page for my portfolio
         <meta name="keywords" content="resume, cv, portfolio, programming">
         <link rel="stylesheet" href="/styles/output.css">
     </head>
-    <body class="h-full flex flex-col">
+    <body class="min-h-full flex flex-col">
         <header class="mt-8 flex flex-col items-center"> 
             <?php require "nav.php";?> 
             <p class="mt-5 italic">Click my name to download the full resume</p>

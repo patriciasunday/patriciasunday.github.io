@@ -15,7 +15,7 @@ Purpose: this is the contact form page for my portfolio
         <link rel="stylesheet" href="/styles/output.css">
         <script src="/scripts/contact-me.js" defer></script>
     </head>
-    <body class=" h-full flex flex-col text-[var(--text-color)]">
+    <body class="min-h-full flex flex-col text-[var(--text-color)]">
         <header class="m-8 flex flex-col gap-6">
             <div class="self-center"><?php require "nav.php"; ?></div>
             <!--form title header group-->
