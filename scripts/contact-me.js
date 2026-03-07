@@ -8,6 +8,24 @@ window.onload = function () {
     const fileInput = document.getElementById("file");
     const fileLabel = uploadDiv.querySelector("label span");
 
+    // bud mailto url with form input contents as body
+    document.getElementById("contact").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+        const fileName = fileInput.files.length > 0 ? fileInput.files[0].name : null;
+
+        let body = `Hi Patricia, \nMy name is ${name}. ${message}`;
+        if (fileName) {
+            // can't attach file to mail, add file name instead
+            body += `\n\n[File to attach: ${fileName}]`;
+        }
+
+        window.location.href = `mailto:patriciasnsunday@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+
     // clicking the div  opens the file popup
     uploadDiv.addEventListener("click", () => fileInput.click());
 

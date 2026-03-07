@@ -28,8 +28,8 @@ Purpose: this is the contact form page for my portfolio
         </header>
         <main class="m-8 mt-0 grow">
             <!--contact form (name, email, message)-->
-            <form id="contact" method="GET" action="mailto:patriciasnsunday@outlook.com" class="flex flex-col md:flex-row gap-6" >
-                <div id="file-upload" class="relative input-flex bg-[var(--primary-color)] min-w-100 rounded-4xl justify-center items-center py-4 cursor-pointer transition-all hover:opacity-80 hover:scale-[1.02]">
+            <form id="contact" class="flex flex-col md:flex-row gap-6">
+                <div id="file-upload" class="relative input-flex bg-[var(--primary-color)] w-100 rounded-4xl justify-center items-center py-4 cursor-pointer transition-all hover:opacity-80 hover:scale-[1.02] overflow-hidden">
                     <label for="file" class="cursor-pointer">
                         <img src="../media/fileupload.png" alt="File upload symbol" class="w-10 m-auto">
                         <span style="font-weight: 600">Choose a file to upload</span>
@@ -42,10 +42,6 @@ Purpose: this is the contact form page for my portfolio
                     <div class="input-flex">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name" class="input-border" required>
-                    </div>
-                    <div class="input-flex">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" class="input-border" required>
                     </div>
                     <div class="input-flex">
                         <label for="subject">Subject</label>
@@ -66,7 +62,3 @@ Purpose: this is the contact form page for my portfolio
         <?php require "footer.php"; ?>
     </body>
 </html>
-<!--
-todo: use js to fix mailto mechanism & have form body in the generated email
-todo: change method, action, and remove required attributes once php form handling is configured
--->
