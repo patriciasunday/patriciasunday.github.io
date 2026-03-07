@@ -1,7 +1,6 @@
 <!--
 Code written by Patricia Sunday
 Purpose: this is the homepage for my portfolio
-Last Edited: December 30, 2025
 -->
 
 <!DOCTYPE html>
