@@ -32,8 +32,8 @@ Purpose: this is the homepage for my portfolio
                 </div>
         </header>
         <main class="grow m-8">
-            <!--info board flip-cards group. grid layout for board pics-->
-            <div class="flex flex-col md:flex-row justify-center items-center gap-15">
+            <!--info board flip-cards-->
+            <section class="flex flex-col md:flex-row justify-center items-center gap-15">
                 <!-- personal info section -->
                 <section>
                     <!--board card-->
@@ -57,7 +57,7 @@ Purpose: this is the homepage for my portfolio
                             </ul>
                         </div>
                         <!--picture face of card-->
-                        <img src="media/me.jpeg" alt="Picture of myself (Patricia)" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
+                        <img src="media/me.jpg" alt="Picture of myself (Patricia)" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
                         <img src="media/greece.jpeg" alt="Sea horizon and trees on Greek island" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
                         <img src="media/cafe.png" alt="The hands of 3 friends and I, holding out drinks from a cafe" class="w-full h-full object-cover rounded-br-4xl">
                     </div>
@@ -71,13 +71,15 @@ Purpose: this is the homepage for my portfolio
                         <!--interactive text face-->
                         <div class="text-card hidden rounded-l-4xl row-span-2 col-span-3 border-r-2 border-[var(--bg-color)] h-full w-full overflow-y-auto">
                             <ul class="list-disc">
-                                <li class="list-gap">Currently, I've completed my 3rd term in Algonquin College's School of Advanced Technology</li>
-                                <li class="list-gap">The certification I am studying for is the 3-year Advanced Diploma in
+                                <li class="list-gap">Currently, in my 4th term at Algonquin College's School of Advanced Technology</li>
+                                <li class="list-gap">Studying for the 3-year Advanced Diploma in
                                     <a href="https://www.algonquincollege.com/sat/program/computer-programming-and-analysis/" class="font-medium">Computer Programming and Analysis</a>
                                 </li>
                                 <li class="list-gap">My studying began in September 2024</li>
+                                <li class="list-gap">Some languages I work in: Java, Python, Dart, Go, SQL, HTML/CSS, PHP, JavaScript</li>
+                                <li class="list-gap">Some practiced skills: </li>
                                 <li class="list-gap">
-                                    For more information about my coursework, visit the
+                                    For more details about my coursework, visit the
                                     <a href="pages/resume.php" class="font-medium">Resume page</a>
                                 </li>
                             </ul>
@@ -86,14 +88,49 @@ Purpose: this is the homepage for my portfolio
                         <img src="media/algonquin-window.jpg" alt="Photograph of the view from an Algonquin classroom window, featuring parking lot, trees, buildings" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
                         <img src="media/algonquin-window2.jpg" alt="Photograph of the view from an Algonquin staircase window, featuring parking trees and buildings" class="w-full h-full object-cover rounded-br-4xl">
                     </div>
-                    <h2 class="text-lg font-medium pl-1">about my school</h2>
+                    <h2 class="text-lg font-medium pl-1">about my education</h2>
                 </section>
-            </div>
+            </section> 
+            <!-- nav boards section -->
+            <section class="flex flex-col items-center gap-15 mt-15">
+                <!--resume and projects row-->
+                <div class="flex flex-col md:flex-row justify-center items-center gap-15">
+                    <!--resume nav board card links to resume page-->
+                    <section>
+                        <a href="pages/resume.php">
+                            <div class="grid grid-cols-4 grid-rows-2 max-w-150 max-h-80 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
+                                <img src="media/hopewell-rocks.JPG" alt="Hopewell Rocks" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
+                                <img src="media/flower.JPG" alt="Flower" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
+                                <img src="media/water-spot.jpeg" alt="Water spot" class="w-full h-full object-cover rounded-br-4xl">
+                            </div>
+                            <h2 class="text-lg font-medium pl-1">my resume</h2>
+                        </a>
+                    </section>
+                    <!--projects nav board card links to projects page-->
+                    <section>
+                        <a href="pages/projects.php">
+                            <div class="grid grid-cols-4 grid-rows-2 max-w-150 max-h-80 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
+                                <img src="media/chicago-bridge.jpg" alt="Chicago bridge" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
+                                <img src="media/athens-view.jpg" alt="View of Athens" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
+                                <img src="media/fireworks.jpeg" alt="Fireworks" class="w-full h-full object-cover rounded-br-4xl">
+                            </div>
+                            <h2 class="text-lg font-medium pl-1">my projects</h2>
+                        </a>
+                    </section>
+                </div>
+                <!--contact me nav board card links to contact page (centered below)-->
+                <section>
+                    <a href="pages/contactme.php">
+                        <div class="grid grid-cols-4 grid-rows-2 max-w-150 max-h-80 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
+                            <img src="media/mini-golf.JPG" alt="Mini golf" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
+                            <img src="media/concert.jpeg" alt="Concert" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
+                            <img src="media/me2.jpeg" alt="Another picture of myself (Patricia)" class="w-full h-full object-cover rounded-br-4xl">
+                        </div>
+                        <h2 class="text-lg font-medium pl-1">contact me</h2>
+                    </a>
+                </section>
+            </section>
         </main>
         <?php require "pages/footer.php"; ?>
     </body>
 </html>
-
-<!--
-todo: add boards for each page (3 more boards total)
--->
