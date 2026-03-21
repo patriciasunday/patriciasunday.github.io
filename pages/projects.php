@@ -9,58 +9,167 @@ Purpose: this is the projects page for my portfolio
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Patricia Sunday">
-        <meta name="description" content="Resume page  for portfolio">
-        <meta name="keywords" content="resume, cv, portfolio, programming">
+        <meta name="description" content="Projects page for portfolio">
+        <meta name="keywords" content="projects, portfolio, programming">
         <link rel="stylesheet" href="/styles/output.css">
         <script src="/scripts/projects.js" defer></script>
     </head>
     <body class="flex flex-col min-h-full text-[var(--text-color)]">
-       <header class="m-8 flex flex-col gap-3">
-            <div class="self-center"><?php require "nav.php"; ?></div>
-            <hr class="mt-5">
-            <p class="self-center italic">Click project to view or collapse details</p>
+        <!--hero section-->
+        <header class="relative h-56 flex flex-col">
+            <img src="../media/profile-background.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="relative z-10 h-full text-white">
+                <div class="absolute top-6 left-1/2 -translate-x-1/2"><?php require "nav.php"; ?></div>
+                <div class="h-full flex flex-col justify-center items-center gap-2 text-center px-8">
+                    <h1 class="text-4xl font-bold">My Projects</h1>
+                    <p class="text-lg font-medium opacity-85">Click Any Project To View Details</p>
+                </div>
+            </div>
         </header>
         <main class="grow m-8 flex gap-15 self-center">
             <button id="back" class="bg-[var(--primary-color)] h-10 w-15 rounded-xl self-center text-[var(--text-color)] font-extrabold cursor-pointer transition-all hover:brightness-125 hover:scale-105 active:scale-90">&lt;</button>
-            <!--project 1-->
-            <div class="project border border-[var(--text-color)] rounded-2xl h-90 ">
-                <img src="../media/techreport.png" alt="Letter of intent for the report" class="project-img w-100 h-75 object-cover rounded-t-2xl border-b border-[var(--text-color)]">
+
+            <!--project 1: client loyalty dashboard-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <div class="project-img w-100 h-75 rounded-t-2xl border-b border-[var(--text-color)] bg-[var(--primary-color)] flex items-center justify-center">
+                    <p class="text-4xl font-black opacity-20">CLD</p>
+                </div>
                 <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
-                    <li class="list-none">Technical Communication-Engineering Technology (ENL2019T), Ottawa, ON</li>
-                    <li>Compiled a 10+ page report on Visible Infrared Imaging Radiometer Suite (VIIRS) as a solution for wildfire prevention in California</li>
-                    <li>Conducted thorough research using credible sources to support and generate key report statements</li>
-                    <li>Utilized Word features, such as Citations & Bibliography, Table of Contents, and Captions for efficient document navigation</li>
-                    <li>Concluded on a well-supported recommendation using step-by-step analysis based on crucial criteria for VIIRS</li>
+                    <li class="list-none text-xs opacity-60">Python, JavaScript, SQLite, Git/GitHub, ClickUp, ZenHub</li>
+                    <li>4-person Agile team building a full-stack loyalty dashboard for a real Montreal startup client</li>
+                    <li>Frontend and backend tasks assigned each sprint; involved in UX planning for UI refactor, pagination, filtering, and cookie consent</li>
+                    <li>Presenting progress to client each sprint</li>
+                    <li>Supporting team lead with meeting minutes and sprint admin</li>
                 </ul>
-                <p class="project-title text-center font-bold text-lg">Technical Recommendation Report</p>
-                <p class="text-center">(Jan - April 2025)</p>
+                <p class="project-title text-center font-bold text-lg">Client Loyalty Dashboard</p>
+                <p class="text-center">(Jan 2026 – Present)</p>
             </div>
-            <!--project 2-->
-            <div class="project border border-[var(--text-color)] rounded-2xl h-90 max-h-90">
-                <img src="../media/fitnesstracker.png" alt="Code for the Fitness Tracker program" class="project-img w-100 h-75 object-cover rounded-t-xl border-b border-[var(--text-color)]">
+
+            <!--project 2: excel-odbc data reporting tool-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <div class="project-img w-100 h-75 rounded-t-2xl border-b border-[var(--text-color)] bg-[var(--primary-color)] flex items-center justify-center">
+                    <p class="text-4xl font-black opacity-20">ODBC</p>
+                </div>
                 <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
-                    <li class="list-none">Object-Oriented Programming (CST8284), Ottawa, ON</li>
-                    <li>Developed a fitness tracker model using Eclipse IDE for Java Developers</li>
-                    <li>Applied encapsulation to ensure data integrity and access control</li>
-                    <li>Tested program functionality by designing and executing one test class and three Junit test cases</li>
-                    <li>Simulated a real fitness tracker by processing user input and generating relevant personalized information</li>
+                    <li class="list-none text-xs opacity-60">SQL, ODBC, MS Excel, SQL Server, VBA</li>
+                    <li>Designing relational schema for reporting and geospatial data visualization</li>
+                    <li>Configuring ODBC connections to pull live SQL Server data into Excel dashboards</li>
+                    <li>Building forms, dashboards, and VBA automation</li>
+                    <li>Preparing technical documentation and stakeholder materials</li>
                 </ul>
-                <p class="project-title text-center font-bold text-lg">Fitness Tracker Program</p>
-                <p class="text-center">(Feb 2025)</p>
+                <p class="project-title text-center font-bold text-lg">Excel-ODBC Data Reporting Tool</p>
+                <p class="text-center">(Feb 2026 – Present)</p>
             </div>
-            <!--project 3-->
-            <div class="project border border-[var(--text-color)] rounded-2xl max-h-90">
-                <img src="../media/sewingshopmanagement.png" alt="Sewing Shop Management system on Microsoft Access" class="project-img w-100 h-75 object-cover rounded-t-xl border-b border-[var(--text-color)]">
+
+            <!--project 3: csv record manager-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <div class="project-img w-100 h-75 rounded-t-2xl border-b border-[var(--text-color)] bg-[var(--primary-color)] flex items-center justify-center">
+                    <p class="text-4xl font-black opacity-20">CSV</p>
+                </div>
                 <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
-                    <li class="list-none">Database Systems (CST2355), Ottawa, ON</li>
-                    <li>Led a team of three to create a sewing shop management system using SQL Server Management Studio and Microsoft Access</li>
-                    <li>Integrated linked database tables into a user-friendly Access application</li>
-                    <li>Created user-friendly interfaces through queries, forms, and reports for easier data manipulation</li>
-                    <li>Improved database efficiency by establishing entity relationships</li>
+                    <li class="list-none text-xs opacity-60">Go (Golang), Fyne, MVC, Git/GitHub</li>
+                    <li>Self-taught Go and Fyne GUI framework to build a full MVC desktop app</li>
+                    <li>CSV parsing, UUID-based record identification, in-memory data management, and persistence layer</li>
+                    <li>Multi-page GUI with full CRUD, menu navigation, and status feedback</li>
+                    <li>Go unit tests for persistence logic; 3 Git branches across 3 iterative project phases</li>
+                </ul>
+                <p class="project-title text-center font-bold text-lg">CSV Record Manager with GUI</p>
+                <p class="text-center">(Jan 2026 – Present)</p>
+            </div>
+
+            <!--project 4: public transit fleet management-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <div class="project-img w-100 h-75 rounded-t-2xl border-b border-[var(--text-color)] bg-[var(--primary-color)] flex items-center justify-center">
+                    <p class="text-4xl font-black opacity-20">PTFM</p>
+                </div>
+                <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
+                    <li class="list-none text-xs opacity-60">Java, Servlets/JSP, MySQL, JDBC, Tomcat, MVC, Git/GitHub</li>
+                    <li>4-person team, 8 weeks; owned user authentication and vehicle management modules</li>
+                    <li>Role-based access for Transit Manager and Operator roles</li>
+                    <li>Abstract inheritance, Factory pattern, DAO interfaces (UserDAO, VehicleDAO), SessionHandler servlet</li>
+                    <li>Full CRUD vehicle management with 6 tracked attributes</li>
+                    <li>Relational schema, ER diagram, physical model, UML class and sequence diagrams; Git branching and pull requests</li>
+                </ul>
+                <p class="project-title text-center font-bold text-lg">Public Transit Fleet Management System</p>
+                <p class="text-center">(Jul – Aug 2025)</p>
+            </div>
+
+            <!--project 5: airline booking android app-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <div class="project-img w-100 h-75 rounded-t-2xl border-b border-[var(--text-color)] bg-[var(--primary-color)] flex items-center justify-center">
+                    <p class="text-4xl font-black opacity-20">ABA</p>
+                </div>
+                <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
+                    <li class="list-none text-xs opacity-60">Flutter/Dart, SQLite (Floor), JUnit, Git/GitHub</li>
+                    <li>4-person team; Android booking app with OOP design</li>
+                    <li>Encrypted local storage via EncryptedSharedPreferences</li>
+                    <li>Collection-based data management with full CRUD</li>
+                    <li>JUnit tests for valid and invalid input cases; responsive layouts</li>
+                    <li>Git branching and merge conflict resolution</li>
+                </ul>
+                <p class="project-title text-center font-bold text-lg">Airline Booking Android App</p>
+                <p class="text-center">(Jun – Aug 2025)</p>
+            </div>
+
+            <!--project 6: personal portfolio website-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <img src="../media/profile-background.jpg" alt="Portfolio website background" class="project-img w-100 h-75 object-cover rounded-t-2xl border-b border-[var(--text-color)]">
+                <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
+                    <li class="list-none text-xs opacity-60">HTML, CSS, JavaScript, PHP, Tailwind CSS, Docker, Git/GitHub</li>
+                    <li>Built from scratch with raw HTML/PHP/JS in a web programming course</li>
+                    <li>Self-taught Tailwind CSS over spring break and refactored the entire UI</li>
+                    <li>Containerized with Docker, deployed to production via Render connected to GitHub</li>
+                    <li>Continuously iterated on features and design</li>
+                </ul>
+                <p class="project-title text-center font-bold text-lg">Personal Portfolio Website</p>
+                <p class="text-center">(May 2025 – Present)</p>
+            </div>
+
+            <!--project 7: agile project planning-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <div class="project-img w-100 h-75 rounded-t-2xl border-b border-[var(--text-color)] bg-[var(--primary-color)] flex items-center justify-center">
+                    <p class="text-4xl font-black opacity-20">DL</p>
+                </div>
+                <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
+                    <li class="list-none text-xs opacity-60">Agile, SDLC, UML, MS Project, MS Excel</li>
+                    <li>Led Agile planning for a property management system simulation (DoorLoop)</li>
+                    <li>Stakeholder analysis, requirements gathering; 8 functional and 4 non-functional requirements</li>
+                    <li>Produced SRS, WBS, RAID log (12 risks logged), and UML diagrams (use case, sequence, activity)</li>
+                    <li>Coordinated tasks and milestones across a 4-person team</li>
+                </ul>
+                <p class="project-title text-center font-bold text-lg">Agile Project Planning: DoorLoop</p>
+                <p class="text-center">(May – Aug 2025)</p>
+            </div>
+
+            <!--project 8: jsf+jdbc student directory-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <div class="project-img w-100 h-75 rounded-t-2xl border-b border-[var(--text-color)] bg-[var(--primary-color)] flex items-center justify-center">
+                    <p class="text-4xl font-black opacity-20">JSF</p>
+                </div>
+                <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
+                    <li class="list-none text-xs opacity-60">Jakarta EE, JSF, JDBC, MySQL, Payara</li>
+                    <li>Full CRUD student directory web app built on a skeleton project</li>
+                    <li>JSF pages, managed beans, and DAO pattern</li>
+                    <li>Deployed on Payara; completed all TODOs and extended functionality beyond requirements</li>
+                </ul>
+                <p class="project-title text-center font-bold text-lg">JSF+JDBC Student Directory</p>
+                <p class="text-center">(Winter 2026)</p>
+            </div>
+
+            <!--project 9: sewing shop management system-->
+            <div class="project border border-[var(--text-color)] rounded-2xl h-90">
+                <img src="../media/sewingshopmanagement.png" alt="Sewing Shop Management system on Microsoft Access" class="project-img w-100 h-75 object-cover rounded-t-2xl border-b border-[var(--text-color)]">
+                <ul class="project-details list-disc list-inside hidden w-100 h-75 overflow-y-auto border-b border-[var(--text-color)] p-6 space-y-3">
+                    <li class="list-none text-xs opacity-60">SQL, SQL Server, Microsoft Access</li>
+                    <li>Led a team of three to design and implement a database-backed management system</li>
+                    <li>SQL Server backend with a Microsoft Access front-end</li>
+                    <li>Queries, forms, and reports for data entry and usability</li>
                 </ul>
                 <p class="project-title text-center font-bold text-lg">Sewing Shop Management System</p>
                 <p class="text-center">(Feb 2025)</p>
             </div>
+
             <button id="forward" class="bg-[var(--primary-color)] h-10 w-15 rounded-xl self-center text-[var(--text-color)] font-extrabold cursor-pointer transition-all hover:brightness-125 hover:scale-105 active:scale-90">&gt;</button>
         </main>
         <?php require "footer.php"; ?>
