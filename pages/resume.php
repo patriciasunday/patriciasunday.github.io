@@ -10,47 +10,32 @@ Purpose: this is the resume page for my portfolio
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Patricia Sunday">
-        <meta name="description" content="Resume page  for portfolio">
+        <meta name="description" content="Resume page for portfolio">
         <meta name="keywords" content="resume, cv, portfolio, programming">
         <link rel="stylesheet" href="/styles/output.css">
     </head>
-    <body class="min-h-full flex flex-col">
-        <header class="mt-8 flex flex-col items-center"> 
-            <?php require "nav.php";?> 
-            <p class="mt-5 italic">Click my name to download the full resume</p>
-        </header>
-        <main class="grow m-8 p-8 flex flex-col border-2 border-[var(--text-color)] rounded-xl shadow-xl">
-            <div class="self-center flex flex-col">
-                <a href="../media/resume.pdf" download class="self-center hover:text-[var(--primary-contrast)]">
-                    <p class="text-2xl font-extrabold underline">Patricia Sunday</p>
-                </a>    
-                <p class="self-center">(226)-698-6622</p>
-                <p class="self-center">patriciasnsunday@outlook.com</p>
+    <body class="min-h-full flex flex-col text-[var(--text-color)]">
+        <!--hero section-->
+        <header class="relative h-56 flex flex-col">
+            <img src="../media/profile-background.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="relative z-10 h-full text-white">
+                <div class="absolute top-6 left-1/2 -translate-x-1/2"><?php require "nav.php"; ?></div>
+                <div class="h-full flex flex-col justify-center items-center gap-2 text-center px-8">
+                    <h1 class="text-4xl font-bold">My Resume</h1>
+                    <p class="text-lg font-medium opacity-85">4th-Term Student &middot; Aspiring Full-Stack Developer &middot; Ottawa, ON</p>
+                </div>
             </div>
-            <p class="mt-4">
-                I'm a 4th-term student with a strong interest in application and web development.
-                I am available for a 4 month internship starting Mid-May 2026, and looking forward to 
-                growing my technical and soft skills in a professional setting!
-            </p> 
-            <div class="md:flex md:gap-10"> <!--for responsive layout-->
-                <div class="mt-4">
-                    <p class="font-bold">Computer Programming and Analysis</p>
-                    <p>Advanced Diploma &nbsp; 2024 - Present (3 years)</p>
-                    <ul class="ml-5 list-disc">
-                        <li>Algonquin College, Ottawa,Ontario</li>
-                        <li>Dean's Honours List; 3.8/4.0</li>
-                    </ul>
-                </div>
-                <div class="mt-4"> 
-                    <p class="font-bold">Current Course-Load</p>
-                    <ul class="ml-5 list-disc">
-                        <li>Object-Oriented Programming with Design Patterns (Java/SQL III)</li>
-                        <li>Mobile GUI Programming</li>
-                        <li>Business Intelligence and Data Analytics</li>
-                        <li>Network Programming</li>
-                        <li>Systems Analysis and Design (Agile)</li>
-                    </ul>
-                </div>
+        </header>
+        <main class="grow flex flex-col items-center px-12 md:px-24 py-12 gap-6">
+            <!--toolbar: download-->
+            <div class="w-full max-w-4xl flex justify-between items-center">
+                <p class="text-sm opacity-60">Available for internship Mid-May 2026</p>
+                <a href="../media/resume.pdf" download class="px-8 py-3 rounded-full bg-[var(--primary-contrast)] text-[var(--bg-color)] font-bold text-sm hover:opacity-80 active:scale-95 transition-all">Download</a>
+            </div>
+            <!--pdf viewer-->
+            <div class="w-full max-w-4xl grow rounded-2xl border border-[var(--text-color)]/10" style="box-shadow: 0 4px 24px color-mix(in srgb, var(--primary-contrast) 30%, transparent); min-height: 80vh; overflow: hidden; isolation: isolate;">
+                <iframe src="../media/resume.pdf#toolbar=0&navpanes=0" class="w-full h-full rounded-2xl" style="min-height: 80vh; display: block;" title="Resume preview"></iframe>
             </div>
         </main>
         <?php require "footer.php"; ?>
