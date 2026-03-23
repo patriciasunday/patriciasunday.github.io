@@ -11,18 +11,19 @@ Purpose: this is the contact form page for my portfolio
         <meta name="author" content="Patricia Sunday">
         <meta name="description" content="Contact form for portfolio">
         <meta name="keywords" content="connect, portfolio, contact, contact me, message, email, form">
-        <link rel="stylesheet" href="/styles/output.css">
-        <script src="/scripts/contact-me.js" defer></script>
+        <link rel="stylesheet" href="../styles/output.css">
+        <script src="../scripts/components.js" defer></script>
+        <script src="../scripts/contact-me.js" defer></script>
     </head>
     <body class="min-h-full flex flex-col text-[var(--text-color)]">
         <!--image header section-->
         <header class="relative h-72 flex flex-col">
-            <img src="../media/profile-background.jpg" alt="Background" class="absolute inset-0 w-full h-full object-cover">
+            <img src="../media/profile-background.jpg" alt="Low-angle photo of a tall tree on a sunny day class="absolute inset-0 w-full h-full object-cover">
             <!--dark overlay so nav and text are readable-->
             <div class="absolute inset-0 bg-black/40"></div>
             <!--nav and hero text on top of overlay-->
             <div class="relative z-10 flex flex-col h-full text-white">
-                <div class="self-center pt-6"><?php require "nav.php"; ?></div>
+                <div class="self-center pt-6"><div id="nav-placeholder"></div></div> <!--see components.js for injected html-->
                 <div class="grow flex flex-col justify-center items-center gap-2 text-center px-8">
                     <h1 class="text-4xl font-bold">Reach Out!</h1>
                     <p class="text-lg font-medium opacity-85">I'd love to hear from you :)</p>
@@ -67,6 +68,6 @@ Purpose: this is the contact form page for my portfolio
             </section>
         </main>
 
-        <?php require "footer.php"; ?>
+        <div id="footer-placeholder"></div> <!--see components.js for injected html-->
     </body>
 </html>
