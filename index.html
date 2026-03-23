@@ -13,16 +13,17 @@ Purpose: this is the homepage for my portfolio
         <meta name="author" content="Patricia Sunday">
         <meta name="description" content="Homepage for portfolio">
         <meta name="keywords" content="homepage, portfolio, programming, patricia sunday">
-        <link rel="stylesheet" href="/styles/output.css">
+        <link rel="stylesheet" href="styles/output.css">
+        <script src="scripts/components.js" defer></script>
         <script src="scripts/flip-card.js" defer></script>
     </head>
     <!--using h-full and flex-col so <main> can grow to push footer to bottom of page, regardless of <body> content-->
     <body class="h-full flex flex-col bg-[var(--bg-color)] text-[var(--text-color)]">
         <header class="flex flex-col items-center mt-8 gap-8 mb-30 mx-8">
-                <?php require "pages/nav.php"; ?>
+                <div id="nav-placeholder"></div> <!--see components.js for injected html-->
                 <!--profile header image group-->
                 <div class="relative w-full h-98 flex justify-center">
-                    <img src="media/profile-background.jpg" alt="Low-angle-shot photograph of a tall tree on a bright sunny day" class="w-full max-w-225 h-75 object-cover rounded-4xl">
+                    <img src="media/profile-background.jpg" alt="Low-angle photo of a tall tree on a sunny day" class="w-full max-w-225 h-75 object-cover rounded-4xl">
                     <img src="media/headshot.png" alt="Circle-shaped picture of myself" class="absolute w-40 rounded-full border-4 border-[var(--primary-color)] top-60">
                 </div>
                 <!--header title group-->
@@ -37,37 +38,36 @@ Purpose: this is the homepage for my portfolio
                 <!-- personal info section -->
                 <section>
                     <!--board card-->
-                    <div class="grid grid-cols-4 grid-rows-2 max-w-150 max-h-80 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
+                    <div class="grid grid-cols-4 grid-rows-2 max-w-120 max-h-64 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
                         <!--text face of card-->
                         <div class="text-card hidden rounded-l-4xl row-span-2 col-span-3 border-r-2 border-[var(--bg-color)] h-full w-full overflow-y-auto">
                             <ul class="list-disc">
                                 <li class="list-gap">I'm a programming student and aspiring full-stack developer</li>
-                                <li class="list-gap">Currently, I'm self-learning Python to deepen my understanding of software automation and its application in daily life and creative projects</li>
+                                <li class="list-gap">Currently, I'm studying enterprise app dev, advance database topics in Oracle, and self-learning Golang to expand my experience in web app dev technologies</li>
                                 <li class="list-gap">
                                     In my free time, I'm likely to be found...
                                     <ul class="list-[circle] pl-5">
-                                        <li class="list-gap">Deep into a good book</li>
-                                        <li class="list-gap">Enjoying volunteer work with loved ones</li>
-                                        <li class="list-gap">Scrolling through Pinterest</li>
-                                        <li class="list-gap">Rewatching my favourite shows</li>
-                                        <li class="list-gap">Binging TV or playing games with family</li>
-                                        <li class="list-gap">Partying or having a night in with friends</li>
+                                        <li class="list-gap">Reading, doing sudoku, sewing, playing sports or some other tactile activity</li>
+                                        <li class="list-gap">Enjoying volunteer work</li>
+                                        <li class="list-gap">Rewatching my favourite comedies or Marvel movies</li>
+                                        <li class="list-gap">Binging shows with family</li>
+                                        <li class="list-gap">Having a night out with friends</li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                         <!--picture face of card-->
                         <img src="media/me.jpg" alt="Picture of myself (Patricia)" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
-                        <img src="media/greece.jpeg" alt="Sea horizon and trees on Greek island" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
-                        <img src="media/cafe.png" alt="The hands of 3 friends and I, holding out drinks from a cafe" class="w-full h-full object-cover rounded-br-4xl">
+                        <img src="media/greece.jpeg" alt="Sea horizon and island trees" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
+                        <img src="media/cafe.png" alt="Hands of 4 girls holding out cafe drinks" class="w-full h-full object-cover rounded-br-4xl">
                     </div>
-                    <h2 class="text-lg font-medium pl-1">about me</h2>
+                    <h2 class="text-xl font-medium pl-1">about me</h2>
                 </section>  
 
                 <!-- college info section -->
                 <section>
                     <!--board card-->
-                    <div class="grid grid-cols-4 grid-rows-2 max-w-150 max-h-80 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
+                    <div class="grid grid-cols-4 grid-rows-2 max-w-120 max-h-64 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
                         <!--interactive text face-->
                         <div class="text-card hidden rounded-l-4xl row-span-2 col-span-3 border-r-2 border-[var(--bg-color)] h-full w-full overflow-y-auto">
                             <ul class="list-disc">
@@ -80,7 +80,7 @@ Purpose: this is the homepage for my portfolio
                                 <li class="list-gap">Some practiced skills: </li>
                                 <li class="list-gap">
                                     For more details about my coursework, visit the
-                                    <a href="pages/resume.php" class="font-medium">Resume page</a>
+                                    <a href="pages/resume.html" class="font-medium">Resume page</a>
                                 </li>
                             </ul>
                         </div>
@@ -88,7 +88,7 @@ Purpose: this is the homepage for my portfolio
                         <img src="media/algonquin-window.jpg" alt="Photograph of the view from an Algonquin classroom window, featuring parking lot, trees, buildings" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
                         <img src="media/algonquin-window2.jpg" alt="Photograph of the view from an Algonquin staircase window, featuring parking trees and buildings" class="w-full h-full object-cover rounded-br-4xl">
                     </div>
-                    <h2 class="text-lg font-medium pl-1">about my education</h2>
+                    <h2 class="text-xl font-medium pl-1">about my education</h2>
                 </section>
             </section> 
             <!-- nav boards section -->
@@ -97,40 +97,40 @@ Purpose: this is the homepage for my portfolio
                 <div class="flex flex-col md:flex-row justify-center items-center gap-15">
                     <!--resume nav board card links to resume page-->
                     <section>
-                        <a href="pages/resume.php">
-                            <div class="grid grid-cols-4 grid-rows-2 max-w-150 max-h-80 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
+                        <a href="pages/resume.html">
+                            <div class="grid grid-cols-4 grid-rows-2 max-w-120 max-h-64 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
                                 <img src="media/hopewell-rocks.JPG" alt="Hopewell Rocks" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
                                 <img src="media/flower.JPG" alt="Flower" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
                                 <img src="media/water-spot.jpeg" alt="Water spot" class="w-full h-full object-cover rounded-br-4xl">
                             </div>
-                            <h2 class="text-lg font-medium pl-1">my resume</h2>
+                            <h2 class="text-xl font-medium pl-1">my resume</h2>
                         </a>
                     </section>
                     <!--projects nav board card links to projects page-->
                     <section>
-                        <a href="pages/projects.php">
-                            <div class="grid grid-cols-4 grid-rows-2 max-w-150 max-h-80 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
+                        <a href="pages/projects.html">
+                            <div class="grid grid-cols-4 grid-rows-2 max-w-120 max-h-64 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
                                 <img src="media/chicago-bridge.jpg" alt="Chicago bridge" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
                                 <img src="media/athens-view.jpg" alt="View of Athens" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
                                 <img src="media/fireworks.jpeg" alt="Fireworks" class="w-full h-full object-cover rounded-br-4xl">
                             </div>
-                            <h2 class="text-lg font-medium pl-1">my projects</h2>
+                            <h2 class="text-xl font-medium pl-1">my projects</h2>
                         </a>
                     </section>
                 </div>
                 <!--contact me nav board card links to contact page (centered below)-->
                 <section>
-                    <a href="pages/contactme.php">
-                        <div class="grid grid-cols-4 grid-rows-2 max-w-150 max-h-80 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
+                    <a href="pages/contactme.html">
+                        <div class="grid grid-cols-4 grid-rows-2 max-w-120 max-h-64 rounded-4xl shadow-md/30 transform hover:-translate-y-1 duration-250 text-sm lg:text-base">
                             <img src="media/mini-golf.JPG" alt="Mini golf" class="image-card w-full h-full object-cover row-span-2 col-span-3 rounded-l-4xl border-r-2 border-[var(--bg-color)]">
                             <img src="media/concert.jpeg" alt="Concert" class="w-full h-full object-cover rounded-tr-4xl border-b-2 border-[var(--bg-color)]">
                             <img src="media/me2.jpeg" alt="Another picture of myself (Patricia)" class="w-full h-full object-cover rounded-br-4xl">
                         </div>
-                        <h2 class="text-lg font-medium pl-1">contact me</h2>
+                        <h2 class="text-xl font-medium pl-1">contact me</h2>
                     </a>
                 </section>
             </section>
         </main>
-        <?php require "pages/footer.php"; ?>
+        <div id="footer-placeholder"></div> <!--see components.js for injected html-->
     </body>
 </html>
