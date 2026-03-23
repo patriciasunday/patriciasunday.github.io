@@ -1,20 +1,25 @@
-imageCards = document.getElementsByClassName("image-card");
-textCards = document.getElementsByClassName("text-card");
+/*
+Author: Patricia Sunday
+Purpose: flip card functionality for index board cards
+*/
+
+const imageCards = document.getElementsByClassName("image-card");
+const textCards = document.getElementsByClassName("text-card");
 
 window.onload = function (){
 
-    //to initially set image cards for display
+    // to initially set image cards for display
     for(let i = 0; i<imageCards.length; i++){
         currentImage = imageCards[i];
         currentImage.style.display = "block"
     }
 
-    //flip card functionality
+    // flip card functionality
     for(let i = 0; i<imageCards.length; i++){
         let currentImage = imageCards[i];
         let currentText = textCards[i];
 
-        //flip away image
+        // flip away image
         currentImage.addEventListener("click", () => {
             if(currentImage.style.display === "block"){
                 currentImage.style.display = "none";
@@ -22,7 +27,7 @@ window.onload = function (){
             }
         });
 
-        //flip away text
+        // flip away text
         currentText.addEventListener("click", () => {
             if(currentText.style.display === "block"){
                 currentText.style.display = "none";

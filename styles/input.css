@@ -2,7 +2,7 @@
 
 /*to resize footer logos equally*/
 .footer-image{
-    @apply w-[1.5rem];
+    @apply w-8;
 }
 
 /*for nav & its interactivity*/
@@ -15,26 +15,18 @@
     @apply hover:text-shadow-lg;
 }
 
-/*for contactme.php --flex structure for input and corresponding label*/
+/*for contactme.html --flex structure for input and corresponding label*/
 .input-flex{
     @apply flex;
     @apply flex-col;
 }
 
-/*for contactme.php --text-related input borders*/
-.input-border{
-    @apply border-1;
-    @apply border-[var(--primary-color)];
-    @apply rounded-xl;
-    @apply p-2;
-}
-
-/*for index.php --text-card-specific styling*/
+/*for index.html --text-card-specific styling*/
 .text-card{
     @apply p-7;
 }
 
-/*for index.php --spaxcing between list items*/
+/*for index.html --spaxcing between list items*/
 .list-gap{
     @apply m-2.5;
 }

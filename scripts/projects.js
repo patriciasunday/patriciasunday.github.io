@@ -1,17 +1,17 @@
 /*
 Author: Patricia Sunday
-Purpose: javascript file for projects page in portfolio
+Purpose: projects navigation functionality (using buttons to go back and forth between projs)
 */
 
-//execute script once window loads
+// execute script once window loads
 window.onload = function () {
-    let projectsShown = 0; //to store amount of projects to be shown on screen
-    let currentProjectIndex = 0; //initializing current project index as first project index in array
+    let projectsShown = 0; // to store amount of projects to be shown on screen
+    let currentProjectIndex = 0; // initializing current project index as first project index in array
     const backButton = document.getElementById("back");
     const forwardButton = document.getElementById("forward");
-    const projects = document.getElementsByClassName("project"); //to store all projects as elements in array
+    const projects = document.getElementsByClassName("project"); // to store all projects as elements in array
 
-    //to change amount of projects to be shown based on page width
+    // to change amount of projects to be shown based on page width
     function updateProjectsShown(){
         let pageWidth = window.innerWidth;
 
@@ -24,11 +24,11 @@ window.onload = function () {
     }
     updateProjectsShown();
 
-    //to update project view based on current project index and amount of projects to show
+    // to update project view based on current project index and amount of projects to show
     function updateView(){
-        //iterating through projects
+        // iterating through projects
         for (let i=0; i<projects.length; i++){
-            //only show project if its between current project index(inclusive) and projects shown range
+            // only show project if its between current project index(inclusive) and projects shown range
             if(i>=currentProjectIndex && i<(currentProjectIndex + projectsShown)) {
                 projects[i].style.display = "block";
             } else {
@@ -37,7 +37,7 @@ window.onload = function () {
         }
     }
 
-    //to decrement current project index
+    // to decrement current project index
     function decrementCurrentProjectIndex(){
         if (currentProjectIndex>0){
             currentProjectIndex--;
@@ -45,7 +45,7 @@ window.onload = function () {
         }
     }
 
-    //to increment current project index
+    // to increment current project index
     function incrementCurrentProjectIndex(){
         if (currentProjectIndex<projects.length - projectsShown) {
             currentProjectIndex++;
@@ -53,7 +53,7 @@ window.onload = function () {
         }
     }
 
-    //to update current project index depending on button clicked
+    // to update current project index depending on button clicked
     backButton.addEventListener("click", decrementCurrentProjectIndex);
     forwardButton.addEventListener("click", incrementCurrentProjectIndex);
 
@@ -68,12 +68,12 @@ window.onload = function () {
         });
     }
 
-    //to update projects when window is resized
+    // to update projects when window is resized
     window.addEventListener("resize", () =>{  
         updateProjectsShown();
         updateView();
     });
 
-    //update project view on load
+    // update project view on load
     updateView();
 };
