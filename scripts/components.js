@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // set nav links using base for root path
     const navHTML = `<nav class="flex flex-row gap-3 text-[var(--text-color)] text-sm font-bold">
-        <a href="${base}index.html" class="nav-activity">Home</a>
-        <a href="${base}pages/resume.html" class="nav-activity">Resume</a>
-        <a href="${base}pages/projects.html" class="nav-activity">Projects</a>
-        <a href="${base}pages/contactme.html" class="nav-activity">Contact Me</a>
+        <a href="${base}index.html" class="nav-activity whitespace-nowrap">Home</a>
+        <a href="${base}pages/resume.html" class="nav-activity whitespace-nowrap">Resume</a>
+        <a href="${base}pages/projects.html" class="nav-activity whitespace-nowrap">Projects</a>
+        <a href="${base}pages/contactme.html" class="nav-activity whitespace-nowrap">Contact Me</a>
     </nav>`;
 
     // set universal footer
