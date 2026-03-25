@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', function () {
     </nav>`;
 
     // set universal footer
-    const footerHTML = `<footer class="flex justify-between items-center py-3 px-8 md:px-12 text-sm bg-[var(--primary-contrast)] text-[var(--bg-color)] border-t-2 border-[var(--subtitle-color)]">
-        <p class="text-base">Copyright &copy; 2025 Patricia Sunday. All Rights Reserved</p>
+    const footerHTML = `<footer class="flex justify-between items-center py-2 px-8 md:px-12 text-sm bg-[var(--text-color)] text-[var(--bg-color)] border-t border-white/10">
+        <p class="text-sm">Copyright &copy; 2025 Patricia Sunday. All Rights Reserved</p>
         <div class="flex gap-5">
             <a href="https://www.linkedin.com/in/patricia-sunday" class="footer-image"><img src="${base}media/linkedin-logo.png" alt="LinkedIn logo"></a>
             <a href="https://github.com/patriciasunday" class="footer-image"><img src="${base}media/github-logo.svg" alt="GitHub logo"></a>
