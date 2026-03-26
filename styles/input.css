@@ -2,7 +2,7 @@
 
 /*to resize footer logos equally*/
 .footer-image{
-    @apply w-8;
+    @apply w-6;
 }
 
 /*for nav & its interactivity*/
@@ -39,7 +39,7 @@
     --subtitle-color: #8C4A6E;
 
     /*for buttons, header, footer, etc*/
-    --primary-color: #FFE6F0;
-    --primary-contrast: #FF6F91;
-    --accent-color: #FFD166;
+    --primary-color: #FFE6FF;
+    --primary-contrast: #FF8ECE;
+    --accent-color: #FF9A6C;
 }
