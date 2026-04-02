@@ -1,54 +1,53 @@
 @import "tailwindcss";
 
-/* for contactme.html --flex structure for input and corresponding label */
+/*to resize footer logos equally*/
+.footer-image{
+    @apply w-6;
+}
+
+/*for nav & its interactivity*/
+.nav-activity{
+    @apply bg-[var(--primary-color)];
+    @apply p-2;
+    @apply rounded-sm;
+    @apply hover:bg-[var(--primary-contrast)];
+    @apply hover:text-[var(--bg-color)];
+    @apply hover:text-shadow-lg;
+}
+
+/*for contactme.html --flex structure for input and corresponding label*/
 .input-flex{
     @apply flex;
     @apply flex-col;
 }
 
-/* for index.html --text-card-specific styling */
+/*for index.html --text-card-specific styling*/
 .text-card{
     @apply p-7;
 }
 
-/* for index.html --spxcing between list items */
+/*for index.html --spaxcing between list items*/
 .list-gap{
     @apply m-2.5;
 }
 
-/* side decals - scroll attachment for smaller viewports*/
+/* fixed side decals so they stay in place while scrolling*/
 body {
     background-image: url('../media/decal-left.svg'), url('../media/decal-right.svg');
     background-position: left top, right top;
-    background-repeat: repeat-y, repeat-y;
-    background-attachment: scroll, scroll;
-    background-size: 120px auto, 120px auto;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-size: 175px auto, 175px auto;
 }
 
-@media (min-width: 1024px) {
-    body {
-        background-attachment: fixed, fixed;
-        background-size: 175px auto, 175px auto;
-    }
-}
-
-/* home + contact page: tighter to the edges so decals don't cut into content */
-body.decal-narrow {
-    background-size: 80px auto, 80px auto;
-}
-
-@media (min-width: 1024px) {
-    body.decal-narrow {
-        background-size: 120px auto, 120px auto;
-    }
-}
-
-/* portfolio palette colors */
+/*for custom variables
+ -portfolio palette colors*/
 :root{
     --bg-color: #FFFDF9;
     --text-color: #3B1F2B;
     --subtitle-color: #8C4A6E;
 
+    /*for buttons, header, footer, etc*/
     --primary-color: #FFE6FF;
     --primary-contrast: #FF8ECE;
     --accent-color: #FF9A6C;
