@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+/*to resize footer logos equally*/
+.footer-image{
+    @apply w-6;
+}
+
+/*for nav & its interactivity*/
+.nav-activity{
+    @apply bg-[var(--primary-color)];
+    @apply p-2;
+    @apply rounded-sm;
+    @apply hover:bg-[var(--primary-contrast)];
+    @apply hover:text-[var(--bg-color)];
+    @apply hover:text-shadow-lg;
+}
+
 /*  for contactme.html --flex structure for input and corresponding label  */
 .input-flex{
     @apply flex;

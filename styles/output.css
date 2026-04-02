@@ -738,6 +738,29 @@
     }
   }
 }
+.footer-image {
+  width: calc(var(--spacing) * 6);
+}
+.nav-activity {
+  background-color: var(--primary-color);
+  padding: calc(var(--spacing) * 2);
+  border-radius: var(--radius-sm);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--primary-contrast);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--bg-color);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      text-shadow: 0px 1px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)), 0px 3px 2px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1)), 0px 4px 8px var(--tw-text-shadow-color, rgb(0 0 0 / 0.1));
+    }
+  }
+}
 .input-flex {
   display: flex;
   flex-direction: column;
