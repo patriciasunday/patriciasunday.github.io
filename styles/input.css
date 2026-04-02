@@ -31,10 +31,19 @@
     @apply m-2.5;
 }
 
+/* fixed side decals so they stay in place while scrolling*/
+body {
+    background-image: url('../media/decal-left.svg'), url('../media/decal-right.svg');
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-size: 175px auto, 175px auto;
+}
+
 /*for custom variables
  -portfolio palette colors*/
 :root{
-    --bg-color: white;
+    --bg-color: #FFFDF9;
     --text-color: #3B1F2B;
     --subtitle-color: #8C4A6E;
 

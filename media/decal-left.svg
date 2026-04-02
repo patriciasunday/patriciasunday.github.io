@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 900">
+  <!-- outer thin rule -->
+  <line x1="146" y1="0" x2="146" y2="900" stroke="#8C4A6E" stroke-width="0.4" opacity="0.15"/>
+  <!-- main rule -->
+  <line x1="138" y1="0" x2="138" y2="900" stroke="#C4799A" stroke-width="0.7" opacity="0.3"/>
+
+  <!-- diamond 1 - same as accent-color -->
+  <path d="M138,76 L142,80 L138,84 L134,80 Z" fill="#FF9A6C" opacity="0.78"/>
+  <!-- small dot -->
+  <circle cx="138" cy="158" r="1.8" fill="#C4799A" opacity="0.45"/>
+  <!-- diamond 2 - mauve -->
+  <path d="M138,226 L141.5,230 L138,234 L134.5,230 Z" fill="#8C4A6E" opacity="0.6"/>
+  <!-- small dot -->
+  <circle cx="138" cy="316" r="1.8" fill="#C4799A" opacity="0.45"/>
+  <!-- diamond 3 - same as accent-color -->
+  <path d="M138,396 L142,400 L138,404 L134,400 Z" fill="#FF9A6C" opacity="0.78"/>
+  <!-- small dot -->
+  <circle cx="138" cy="490" r="1.8" fill="#C4799A" opacity="0.45"/>
+  <!-- diamond 4 - mauve -->
+  <path d="M138,576 L141.5,580 L138,584 L134.5,580 Z" fill="#8C4A6E" opacity="0.6"/>
+  <!-- small dot -->
+  <circle cx="138" cy="668" r="1.8" fill="#C4799A" opacity="0.45"/>
+  <!-- diamond 5 - same as accent-color -->
+  <path d="M138,756 L142,760 L138,764 L134,760 Z" fill="#FF9A6C" opacity="0.78"/>
+  <!-- small dot -->
+  <circle cx="138" cy="840" r="1.8" fill="#C4799A" opacity="0.45"/>
+</svg>
